@@ -1,17 +1,22 @@
+shell = "/opt/homebrew/bin/zsh"
+
+live_config_reload = true
+
 [selection]
 save_to_clipboard = true
 
 [window]
-padding = { x = 5, y = 3 }
-decorations = "None"
-startup_mode = "Fullscreen"
+padding = {x = 5, y = 5}
+dynamic_padding = true
+startup_mode = "Windowed"
+dimensions = { columns = 120, lines = 160 }
 
 [font]
-normal = { family = "Hack", style = "Regular" }
-bold = { family = "Hack", style = "Bold" }
-italic = { family = "Hack", style = "Italic" }
-bold_italic = { family = "Hack", style = "Bold Italic" }
-size = 14
+normal = { family = "FiraCode Nerd Font Propo", style = "Regular" }
+bold = { family = "FiraCode Nerd Font Propo", style = "Bold" }
+italic = { family = "FiraCode Nerd Font Propo", style = "Italic" }
+bold_italic = { family = "FiraCode Nerd Font Propo", style = "Bold Italic" }
+size = 13
 
 # Default colors
 [colors.primary]
