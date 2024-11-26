@@ -1,3 +1,4 @@
+[general]
 live_config_reload = true
 
 [selection]
@@ -14,7 +15,7 @@ normal = { family = "FiraCode Nerd Font Propo", style = "Regular" }
 bold = { family = "FiraCode Nerd Font Propo", style = "Bold" }
 italic = { family = "FiraCode Nerd Font Propo", style = "Italic" }
 bold_italic = { family = "FiraCode Nerd Font Propo", style = "Bold Italic" }
-size = 13
+size = 14
 
 # Default colors
 [colors.primary]
