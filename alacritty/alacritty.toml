@@ -19,11 +19,12 @@ size = 14
 
 # Default colors
 [colors.primary]
-background = "#2c2c2c"
-foreground = "#d6d6d6"
+background = "#3C3836"
+foreground = "#FBF1C7"
 
-dim_foreground    = "#dbdbdb"
-bright_foreground = "#d9d9d9"
+dim_foreground    = "#F8E7A0"
+bright_foreground = "#FDF5D8"
+bright_background = "#665C54"
 
 # Cursor colors
 [colors.cursor]
@@ -33,13 +34,13 @@ cursor = "#d9d9d9"
 # Normal colors
 [colors.normal]
 black   = "#1c1c1c"
-red     = "#bc5653"
-green   = "#909d63"
-yellow  = "#ebc17a"
-blue    = "#7eaac7"
-magenta = "#aa6292"
-cyan    = "#86d3ce"
-white   = "#cacaca"
+red     = "#B31F19"
+green   = "#7A7A15"
+yellow  = "#D79921"
+blue    = "#458588"
+magenta = "#B16286"
+cyan    = "#689D6A"
+white   = "#FDF5D8"
 
 # Bright colors
 [colors.bright]
