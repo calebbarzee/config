@@ -24,7 +24,6 @@ foreground = "#FBF1C7"
 
 dim_foreground    = "#F8E7A0"
 bright_foreground = "#FDF5D8"
-bright_background = "#665C54"
 
 # Cursor colors
 [colors.cursor]
