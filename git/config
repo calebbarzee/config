@@ -25,3 +25,5 @@
     cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"
 [commit]
 	template = /Users/calebbarzee/.stCommitMsg
+[push]
+	autoSetupRemote = true
