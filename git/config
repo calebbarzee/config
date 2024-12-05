@@ -22,12 +22,6 @@
 	template = /Users/calebbarzee/.stCommitMsg
 [push]
 	autoSetupRemote = true
-[alias]
-    x = checkout
-    br = branch
-    c = commit -m
-    a = add
-    unstage = reset HEAD --
 [difftool "difftastic"]
     # See `man git-difftool` for a description of MERGED, LOCAL and REMOTE.
     cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"

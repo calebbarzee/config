@@ -23,6 +23,11 @@ alias git_i='git fetch --all && git status && echo "\nlog:" && git log --oneline
 alias git_p='git pull'
 alias git_pu='git push'
 alias git_branches='git fetch --all && git branch -a'
+alias git_x='git checkout'
+alias git_br='git branch'
+alias git_c='git commit -m' # commit with a provided message
+alias git_a='git add'
+alias git_u='reset HEAD --' # unstage the current changes and reset to HEAD
 # unix CLI customize
 alias ..='cd ..'
 alias ...='cd ../..'
