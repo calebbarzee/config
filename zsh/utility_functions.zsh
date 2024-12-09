@@ -43,7 +43,7 @@ git_sync() {
     local commit_msg="$1"
     local current_branch=$(git branch --show-current)
 
-    if [[ -z $(git status --porcelain) ]] && [[ -z $(git log "origin/$current_branch..$current_branch") ]]; then
+    if [[ -z $(git status --porcelain) ]] && [[ -z $(git log "origin/$current_branch..$current_branch" 2>/dev/null) ]]; then
         git pull
         git status
         return 0
@@ -56,7 +56,8 @@ git_sync() {
 
     echo -e "\nOn branch: $current_branch"
     if ! read_Yn "Is this the correct branch?"; then
-        [[ "$stashed" = true ]] && git stash pop
+        # in the future add another path here to allow user to switch to current branch when branch is wrong
+        # and continue the commit
         return 1
     fi
 
