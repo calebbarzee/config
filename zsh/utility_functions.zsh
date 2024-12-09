@@ -26,13 +26,20 @@ open_alacritty_and_exit() {
 }
 
 git_sync() {
-    git stash
-    git pull
-    git stash pop
+    local stashed=false
+    if [[ -n $(git status --porcelain) ]]; then
+        git stash
+        stashed=true
+    fi
+    git pull --quiet || git pull
+    if [[ "$stashed" = true ]]; then
+        git stash pop
+    fi
     git add -A
     git commit -m "$1"
     git push
 }
+
 github_create_private() {
     gh repo create '$1' --private --source=. --remote=origin --push
 }
