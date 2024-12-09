@@ -43,6 +43,12 @@ git_sync() {
     local commit_msg="$1"
     local current_branch=$(git branch --show-current)
 
+    if [[ -z $(git status --porcelain) ]] && [[ -z $(git log "origin/$current_branch..$current_branch") ]]; then
+        git pull
+        git status
+        return 0
+    fi
+
     if [[ -n $(git status --porcelain) ]]; then
         git stash
         stashed=true
