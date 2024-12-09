@@ -24,3 +24,15 @@ open_alacritty_and_exit() {
         return 1
     fi
 }
+
+git_sync() {
+    git stash
+    git pull
+    git stash pop
+    git add -A
+    git commit -m "$1"
+    git push
+}
+github_create_private() {
+    gh repo create '$1' --private --source=. --remote=origin --push
+}

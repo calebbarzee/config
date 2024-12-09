@@ -13,21 +13,23 @@ alias brew_arm_ri='arch -arm64 brew reinstall'
 # ai tools
 alias huggin='huggingface-cli'
 # docker
-alias doc='docker'
-alias doc_comp='docker-compose'
+alias d='docker'
+alias d_comp='docker-compose'
 alias d_build_v_nc='BUILDKIT_PROGRESS=plain docker buildx build --no-cache'
 alias d_build_v='BUILDKIT_PROGRESS=plain docker buildx build'
 # git
-alias git_s='git status'
-alias git_i='git fetch --all && git status && echo "\nlog:" && git log --oneline --graph --decorate --all -n 10 && echo "\ndiff:" && git diff --stat HEAD@{1} HEAD'
-alias git_p='git pull'
-alias git_pu='git push'
-alias git_branches='git fetch --all && git branch -a'
-alias git_x='git checkout'
-alias git_br='git branch'
-alias git_c='git commit -m' # commit with a provided message
-alias git_a='git add'
-alias git_u='reset HEAD --' # unstage the current changes and reset to HEAD
+alias g_s='git status'
+alias g_i='git fetch --all && git status && echo "\nlog:" && git log --oneline --graph --decorate --all -n 10 && echo "\ndiff:" && git diff --stat HEAD@{1} HEAD'
+alias g_p='git pull'
+alias g_pu='git push'
+alias g_brs='git fetch --all && git branch -a'
+alias g_x='git checkout'
+alias g_br='git branch'
+alias g_c='git commit -m' # commit with a provided message
+alias g_a='git add'
+alias g_u='reset HEAD --' # unstage the current changes and reset to HEAD
+alias g_sy='git_sync'
+alias gh_c='git_create_private'
 # unix CLI customize
 alias ..='cd ..'
 alias ...='cd ../..'

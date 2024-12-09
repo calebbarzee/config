@@ -11,8 +11,11 @@ export XDG_CONFIG_HOME=$HOME/.config
 # work config
 export GOPRIVATE='github.com/Trident-Sensing/*'
 
-source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/utility_functions.zsh
+# utility functions get sourced first since some aliases shorten these functions
+source ~/.config/zsh/aliases.zsh
+
+source $HOME/.cargo/env
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
