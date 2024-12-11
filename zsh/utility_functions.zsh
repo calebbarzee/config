@@ -15,12 +15,12 @@ f_cd() {
 }
 
 open_alacritty_and_exit() {
-    local dir='${1:-$(pwd)}'
-    if [ -d '$dir' ]; then
-        alacritty --working-directory '$dir' & disown
+    local dir="${1:-$(pwd)}"
+    if [ -d "$dir" ]; then
+        alacritty --working-directory "$dir" & disown
         exit
     else
-        echo 'Error: Directory '$dir' does not exist.'
+        echo 'Error: Directory "$dir" does not exist.'
         return 1
     fi
 }
@@ -33,7 +33,7 @@ read_Yn() {
         case $response in
             [yY]|"") return 0 ;;
             [nN]) return 1 ;;
-            *) echo "Please enter y/Y/Enter for yes, or n/N for no" ;;
+            *) echo 'Please enter y/Y/Enter for yes, or n/N for no' ;;
         esac
     done
 }
