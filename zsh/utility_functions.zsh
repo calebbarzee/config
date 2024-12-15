@@ -67,8 +67,8 @@ git_sync() {
         git stash pop
     fi
 
-    echo -e "\nChanges to be committed:"
-    git status --short
+    echo -e "\nPlease choose what to add:"
+    git add -i
 
     if [[ -z "$commit_msg" ]]; then
         read "commit_msg?Please enter a commit message: "
@@ -79,7 +79,6 @@ git_sync() {
         return 1
     fi
 
-    git add -A
     git commit -m "$commit_msg"
     git push
 }
