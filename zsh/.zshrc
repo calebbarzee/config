@@ -10,6 +10,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # work config
 export GOPRIVATE='github.com/Trident-Sensing/*'
+#brew services start black # start up python formatter
 
 source ~/.config/zsh/utility_functions.zsh
 # utility functions get sourced first since some aliases shorten these functions

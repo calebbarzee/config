@@ -27,7 +27,7 @@ alias g_x='git checkout'
 alias g_br='git branch'
 alias g_c='git commit -m' # commit with a provided message
 alias g_a='git add'
-alias g_u='reset HEAD --' # unstage the current changes and reset to HEAD
+alias g_u='git reset --soft' # unstage the current changes and reset to HEAD
 alias g_sy='git_sync'
 alias gh_c='git_create_private'
 # unix CLI customize
