@@ -108,6 +108,23 @@ git_info_related() {
     # git diff --stat HEAD@{1} HEAD | cat'
 }
 
+git_file_diff_10() {
+    if [ -z "$1" ]; then
+        echo "Usage: file_diff <filename> [number_of_commits]"
+        # ^ tell the user they need to supply a file name
+        return 1
+    fi
+
+    num_commits=${2:-10}
+    # ^ default to 10 commits prior if not specified
+
+    old_commit=$(git rev-list HEAD -n $num_commits | tail -n 1)
+    # ^ get the necessary commit hash
+
+    echo -e "\nShowing changes to $1 over last $num_commits commits:"
+    PAGER='' git diff $old_commit..HEAD "$1"
+}
+
 github_create_private() {
     gh repo create '$1' --private --source=. --remote=origin --push
 }

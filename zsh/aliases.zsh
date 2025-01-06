@@ -20,6 +20,7 @@ alias d_build_v='BUILDKIT_PROGRESS=plain docker buildx build'
 # git
 alias g_s='git fetch --all && git status'
 alias g_i='git_info'
+alias g_fd='git_file_diff_10'
 alias g_p='git pull'
 alias g_pu='git push'
 alias g_brs='git fetch --all && git branch -a'
