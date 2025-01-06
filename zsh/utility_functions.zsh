@@ -83,6 +83,31 @@ git_sync() {
     git push
 }
 
+git_info() {
+    git fetch --all
+    git status
+    git rev-parse --abbrev-ref HEAD
+    # ^ display branch name
+    PAGER='' git log --oneline --graph --decorate -n 10
+    # ^ show recent commits and prevent paging (could also pipe to cat or less)
+    PAGER='' git diff --stat HEAD@{1} HEAD
+    # ^ show file changes and prevent paging
+}
+
+git_info_related() {
+    # place holder for fuction to show changes in related or affected branches
+    # alias g_i='git fetch --all
+    # git status
+    # echo "\nBranch Info:"
+    # git rev-parse --abbrev-ref HEAD
+    # echo "\nLog (current branch):"
+    # git log --oneline --graph --decorate -n 10
+    # echo "\nRelated branches:"
+    # git log --oneline --graph --decorate --branches -n 5
+    # echo "\nDiff from previous state:"
+    # git diff --stat HEAD@{1} HEAD | cat'
+}
+
 github_create_private() {
     gh repo create '$1' --private --source=. --remote=origin --push
 }

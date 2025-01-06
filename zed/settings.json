@@ -1,102 +1,99 @@
 {
-  "ssh_connections": [
-    {
-      "host": "emcheck-pp4.local",
-      "username": "pi",
-      "projects": [
+    "ssh_connections": [
         {
-          "paths": [
-            "~/EMCHECK"
-          ]
-        },
-        {
-          "paths": [
-            "~/sdr_capture_test"
-          ]
+            "host": "emcheck-pp4.local",
+            "username": "pi",
+            "projects": [
+                {
+                    "paths": ["~/EMCHECK"]
+                },
+                {
+                    "paths": ["~/sdr_capture_test"]
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "ui_font_size": 14,
-  "buffer_font_family": "FiraCode Nerd Font Propo",
-  "buffer_font_weight": 300,
-  "buffer_font_size": 14,
-  "buffer_line_height": "comfortable",
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
-    },
-    "version": "2"
-  },
-  "autosave": "on_focus_change",
-  "format_on_save": "off",
-  "vim_mode": true,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Gruvbox Dark"
-  },
-  "languages": {
-    "Python": {
-      "format_on_save": "off",
-      "tab_size": 4,
-      "hard_tabs": false,
-      "enable_language_server": true,
-      "language_servers": ["pyright"]
-    },
-    "Go": {
-      "format_on_save": "off",
-      "tab_size": 4,
-      "hard_tabs": true,
-      "enable_language_server": true,
-      "language_servers": ["gopls"],
-      "code_actions_on_format": {
-        "source.organizeImports": true
-      }
-    },
-    "JSON": {
-      "format_on_save": "off",
-      "tab_size": 4
-    },
-    "YAML": {
-      "format_on_save": "off",
-      "tab_size": 4
-    }
-  },
-  "lsp": {
-    "gopls": {
-      "initialization_options": {
-        "usePlaceholders": true,
-        "staticcheck": true,
-        "analyses": {
-          "unusedparams": true,
-          "shadow": true
+    ],
+    "ui_font_size": 14,
+    "buffer_font_family": "FiraCode Nerd Font Propo",
+    "buffer_font_weight": 300,
+    "buffer_font_size": 14,
+    "buffer_line_height": "comfortable",
+    "assistant": {
+        "default_model": {
+            "provider": "zed.dev",
+            "model": "claude-3-5-sonnet-20240620"
         },
-        "hints": {
-          "assignVariableTypes": false,
-          "compositeLiteralFields": false,
-          "constantValues": false,
-          "functionTypeParameters": false,
-          "parameterNames": false,
-          "rangeVariableTypes": false
+        "version": "2"
+    },
+    "autosave": "on_focus_change",
+    "format_on_save": "off",
+    "tab_size": 4,
+    "hard_tabs": false,
+    "vim_mode": true,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Gruvbox Dark"
+    },
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true
+    },
+    "lsp": {
+        "gopls": {
+            "initialization_options": {
+                "usePlaceholders": true,
+                "staticcheck": true,
+                "analyses": {
+                    "unusedparams": true,
+                    "shadow": true
+                }
+            }
+        },
+        "pyright": {
+            "settings": {
+                "python.analysis": {
+                    "diagnosticMode": "workspace",
+                    "typeCheckingMode": "basic"
+                },
+                "python.pythonPath": "/opt/homebrew/bin/python3"
+            }
+        },
+        "deno": {
+            "settings": {
+                "deno": {
+                    "enable": true
+                }
+            }
         }
-      }
     },
-    "pyright": {
-      "settings": {
-        "python.analysis": {
-          "diagnosticMode": "workspace",
-          "typeCheckingMode": "basic"
+    "languages": {
+        "Python": {
+            "language_servers": ["pyright"]
         },
-        "python.pythonPath": "/opt/homebrew/bin/python3"
-      }
+        "Go": {
+            "language_servers": ["gopls"],
+            "code_actions_on_format": {
+                "source.organizeImports": true
+            }
+        },
+        "JavaScript": {
+            "language_servers": ["deno", "!eslint"],
+            "formatter": "language_server"
+        },
+        "JSX": {
+            "language_servers": ["deno", "!eslint"],
+            "formatter": "language_server"
+        },
+        "TypeScript": {
+            "language_servers": ["deno", "!eslint"],
+            "formatter": "language_server"
+        },
+        "TSX": {
+            "language_servers": ["deno", "!eslint"],
+            "formatter": "language_server"
+        }
     }
-  },
-  "inlay_hints": {
-    "enabled": true,
-    "show_type_hints": true,
-    "show_parameter_hints": true,
-    "show_other_hints": true
-  }
 }

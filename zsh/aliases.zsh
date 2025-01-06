@@ -19,7 +19,7 @@ alias d_build_v_nc='BUILDKIT_PROGRESS=plain docker buildx build --no-cache'
 alias d_build_v='BUILDKIT_PROGRESS=plain docker buildx build'
 # git
 alias g_s='git fetch --all && git status'
-alias g_i='git fetch --all && git status && echo "\nlog:" && git log --oneline --graph --decorate --all -n 10 && echo "\ndiff:" && git diff --stat HEAD@{1} HEAD'
+alias g_i='git_info'
 alias g_p='git pull'
 alias g_pu='git push'
 alias g_brs='git fetch --all && git branch -a'
