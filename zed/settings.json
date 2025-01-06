@@ -18,6 +18,9 @@
     "buffer_font_weight": 300,
     "buffer_font_size": 14,
     "buffer_line_height": "comfortable",
+    "buffer_font_features": {
+        "calt": false
+    },
     "assistant": {
         "default_model": {
             "provider": "zed.dev",
