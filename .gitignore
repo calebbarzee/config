@@ -1,7 +1,12 @@
 .DS_Store
+**credentials
 .zsh_history
 .zsh_sessions
 zed/conversations
 zed/embeddings
 zed/prompts
 raycast/extensions
+QtProject
+gnuradio
+gtk-2.0
+gtk-3.0

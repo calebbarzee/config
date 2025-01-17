@@ -15,7 +15,11 @@
   {
     "context": "Editor",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      // "j k": ["workspace::SendKeystrokes", "escape"],
+      // ^^^ for mike, move to only work in insert mode
+      // "f b": "tab_switcher::Toggle",
+      // "f i": "file_finder::Toggle"
+      //  ^^^ move only work in vim normal mode
     }
   }
 ]

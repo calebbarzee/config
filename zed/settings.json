@@ -1,18 +1,46 @@
 {
     "ssh_connections": [
+    {
+      "host": "emcheck-pp4.local",
+      "username": "pi",
+      "projects": [
         {
-            "host": "emcheck-pp4.local",
-            "username": "pi",
-            "projects": [
-                {
-                    "paths": ["~/EMCHECK"]
-                },
-                {
-                    "paths": ["~/sdr_capture_test"]
-                }
-            ]
+          "paths": [
+            "~/EMCHECK"
+          ]
+        },
+        {
+          "paths": [
+            "~/sdr_capture_test"
+          ]
         }
-    ],
+      ]
+    },
+    {
+      "host": "emcheck-4.local",
+      "username": "pi",
+      "projects": [
+        {
+          "paths": [
+            "~/EMCHECK"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "emcheck-pp7.local",
+      "username": "pi",
+      "projects": [
+        {
+          "paths": [
+            "~/EMCHECK"
+          ]
+        }
+      ]
+    }
+  ],
+    "soft_wrap": "editor_width",
+    "relative_line_numbers": true,
     "ui_font_size": 14,
     "buffer_font_family": "FiraCode Nerd Font Propo",
     "buffer_font_weight": 300,
@@ -37,6 +65,9 @@
         "mode": "system",
         "light": "One Light",
         "dark": "Gruvbox Dark"
+    },
+    "search": {
+        "case_sensitive": true
     },
     "inlay_hints": {
         "enabled": true,
