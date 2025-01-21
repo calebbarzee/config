@@ -5,7 +5,7 @@ live_config_reload = true
 save_to_clipboard = true
 
 [window]
-padding = {x = 5, y = 5}
+padding = {x = 10, y = 15}
 dynamic_padding = true
 startup_mode = "Windowed"
 dimensions = { columns = 120, lines = 160 }
@@ -15,7 +15,7 @@ normal = { family = "FiraCode Nerd Font Propo", style = "Regular" }
 bold = { family = "FiraCode Nerd Font Propo", style = "Bold" }
 italic = { family = "FiraCode Nerd Font Propo", style = "Italic" }
 bold_italic = { family = "FiraCode Nerd Font Propo", style = "Bold Italic" }
-size = 14
+size = 16
 
 # Default colors
 [colors.primary]
