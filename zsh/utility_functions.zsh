@@ -1,17 +1,32 @@
 #!/bin/zsh
 
-mk_cd() {
+mkdir_and_cd() {
   mkdir -p "$1" && cd "$1"
 }
 
-gc_cd() {
+git_clone_and_cd() {
   git clone "$1" && cd "$(basename "$1" .git)"
 }
 
-f_cd() {
+find_and_cd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
+}
+
+pathify() {
+    local target="$1"
+    # absolute path provided
+    if [[ "$target" = /* ]]; then
+        echo "$target"
+    # relative path provided
+    else
+        echo "$(pwd)/${target}"
+    fi
+}
+
+open_zed() {
+    zed "$(pathify "${1:-$(pwd)}")"
 }
 
 open_alacritty_and_exit() {

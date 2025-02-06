@@ -5,10 +5,9 @@ live_config_reload = true
 save_to_clipboard = true
 
 [window]
-padding = {x = 10, y = 15}
 dynamic_padding = true
 startup_mode = "Windowed"
-dimensions = { columns = 120, lines = 160 }
+dimensions = { columns = 100, lines = 68 }
 
 [font]
 normal = { family = "FiraCode Nerd Font Propo", style = "Regular" }

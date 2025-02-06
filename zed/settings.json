@@ -1,22 +1,6 @@
 {
     "ssh_connections": [
     {
-      "host": "emcheck-pp4.local",
-      "username": "pi",
-      "projects": [
-        {
-          "paths": [
-            "~/EMCHECK"
-          ]
-        },
-        {
-          "paths": [
-            "~/sdr_capture_test"
-          ]
-        }
-      ]
-    },
-    {
       "host": "emcheck-4.local",
       "username": "pi",
       "projects": [
@@ -28,12 +12,38 @@
       ]
     },
     {
-      "host": "emcheck-pp7.local",
+      "host": "emcheck-dev-2.local",
       "username": "pi",
       "projects": [
         {
           "paths": [
+            "/home/pi"
+          ]
+        },
+        {
+          "paths": [
             "~/EMCHECK"
+          ]
+        },
+        {
+          "paths": [
+            "~/EMCHECK/backend"
+          ]
+        },
+        {
+          "paths": [
+            "~/cariboulite"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "10.1.7.160",
+      "username": "pi",
+      "projects": [
+        {
+          "paths": [
+            "~/EMCHECK/backend"
           ]
         }
       ]
@@ -44,7 +54,7 @@
     "ui_font_size": 14,
     "buffer_font_family": "FiraCode Nerd Font Propo",
     "buffer_font_weight": 300,
-    "buffer_font_size": 14,
+    "buffer_font_size": null,
     "buffer_line_height": "comfortable",
     "buffer_font_features": {
         "calt": false
@@ -52,7 +62,7 @@
     "assistant": {
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-3-5-sonnet-20240620"
+            "model": "claude-3-5-sonnet-latest"
         },
         "version": "2"
     },
@@ -67,10 +77,14 @@
         "dark": "Gruvbox Dark"
     },
     "search": {
-        "case_sensitive": true
+        "case_sensitive": false
+    },
+    "file_types": {
+        "Dockerfile": ["Dockerfile*"]
     },
     "inlay_hints": {
-        "enabled": true,
+        // just write these in/autocomplete them
+        "enabled": false,
         "show_type_hints": true,
         "show_parameter_hints": true,
         "show_other_hints": true

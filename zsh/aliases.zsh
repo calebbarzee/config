@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-alias zed='zed .'
+alias zed='open_zed'
 # terminal open (override macOS native terminal open)
 alias alacritty='open_alacritty_and_exit'
 # python (default to python 3)
@@ -32,6 +32,9 @@ alias g_u='git reset --soft' # unstage the current changes and reset to HEAD
 alias g_sy='git_sync'
 alias gh_c='git_create_private'
 # unix CLI customize
+alias mkcd='mkdir_and_cd'
+alias gccd='git_clone_and_cd'
+alias fcd='find_and_cd'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias f='fzf'
