@@ -2,7 +2,25 @@
 {
 "context": "Editor && vim_mode == insert",
 "bindings": {
-    "j k": ["workspace::SendKeystrokes", "escape"] // doom emacs inspired vim escape
+    "j k": ["workspace::SendKeystrokes", "escape"]
+}
+},
+{
+"context": "VimControl && !menu && !(vim_mode == insert)",
+"bindings": {
+
+    // Window management (doom-emacs style)
+    "space w c": "pane::CloseActiveItem",
+    "space w c a": "workspace::CloseAllItemsAndPanes",
+    "space w s": "pane::SplitRight",
+    "space w d": "pane::SplitDown",
+    "space w w": "workspace::ActivateNextPane",
+    "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+    "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+    "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+    "space w l": ["workspace::ActivatePaneInDirection", "Right"],
+    "space w r": "pane::RevealInProjectPanel",
+    "space w g d": "editor::GoToDefinitionSplit"
 }
 },
 {
