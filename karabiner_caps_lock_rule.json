@@ -1,0 +1,29 @@
+{
+    "description": "caps_lock: tap -> escape, held -> hyper_key",
+    "manipulators": [
+        {
+            "description": "Change caps_lock held to command+control+option+shift",
+            "type": "basic",
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to_if_alone": [
+                {
+                    "key_code": "escape",
+                    "lazy": true
+                }
+            ],
+            "to_if_held_down": [
+                {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_command", "left_control", "left_option"]
+                }
+            ],
+            "parameters": {
+                "basic.to_if_alone_timeout_milliseconds": 200,
+                "basic.to_if_held_down_threshold_milliseconds": 200
+            }
+        }
+    ]
+}

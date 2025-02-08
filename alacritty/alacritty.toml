@@ -16,6 +16,11 @@ italic = { family = "FiraCode Nerd Font Propo", style = "Italic" }
 bold_italic = { family = "FiraCode Nerd Font Propo", style = "Bold Italic" }
 size = 16
 
+[cursor]
+style.blinking = "On"
+blink_timeout = 10
+blink_interval = 550
+
 # Default colors
 [colors.primary]
 background = "#3C3836"
@@ -61,3 +66,9 @@ blue    = "#556b79"
 magenta = "#6e4962"
 cyan    = "#5c8482"
 white   = "#828282"
+
+
+[keyboard]
+bindings = [
+    { "action" = "ToggleViMode", "key" = "v", "mods" = "Command | Control | Option | Shift" }
+]

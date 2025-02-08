@@ -1,0 +1,139 @@
+# currently not as good as aerospace, so switching back
+# aerospace is better at:
+# reduced lag by not using spaces (which i saw not using spaces as a downfall of aerospace at first)
+# plays nicely with raycast app switching
+
+
+layouts:
+  - tall
+  - wide
+  - fullscreen
+  - column
+
+mod1:
+  - option
+  - shift
+
+mod2:
+  - option
+  - shift
+  - control
+
+# Window management settings
+window-max-count: 4
+
+# Mouse behavior
+mouse-follows-focus: true
+focus-follows-mouse: false
+mouse-swaps-windows: false
+mouse-resizes-windows: true
+
+# General settings
+new-windows-to-main: false
+follow-space-thrown-windows: true
+enables-layout-hud: true
+enables-layout-hud-on-space-change: true
+
+commands:
+  # TODO: add directional focus switching
+  focus-ccw:
+    mod: mod1
+    key: k
+  focus-cw:
+    mod: mod1
+    key: j
+  swap-ccw:
+    mod: mod2
+    key: k
+  swap-cw:
+    mod: mod2
+    key: j
+
+  # Workspace movement (option + number)
+  focus-screen-1:
+    mod: mod1
+    key: 1
+  focus-screen-2:
+    mod: mod1
+    key: 2
+  focus-screen-3:
+    mod: mod1
+    key: 3
+  focus-screen-4:
+    mod: mod1
+    key: 4
+  focus-screen-5:
+    mod: mod1
+    key: 5
+  focus-screen-6:
+    mod: mod1
+    key: 6
+  focus-screen-7:
+    mod: mod1
+    key: 7
+  focus-screen-8:
+    mod: mod1
+    key: 8
+  focus-screen-9:
+    mod: mod1
+    key: 9
+
+  # Window movement to workspaces (option + shift + number)
+  throw-space-left:
+    mod: mod2
+    key: h
+  throw-space-right:
+    mod: mod2
+    key: l
+  throw-space-1:
+    mod: mod2
+    key: 1
+  throw-space-2:
+    mod: mod2
+    key: 2
+  throw-space-3:
+    mod: mod2
+    key: 3
+  throw-space-4:
+    mod: mod2
+    key: 4
+  throw-space-5:
+    mod: mod2
+    key: 5
+  throw-space-6:
+    mod: mod2
+    key: 6
+  throw-space-7:
+    mod: mod2
+    key: 7
+  throw-space-8:
+    mod: mod2
+    key: 8
+  throw-space-9:
+    mod: mod2
+    key: 9
+
+  # Layout cycling (option + /)
+  cycle-layout:
+    mod: mod1
+    key: slash
+
+  # Window resizing (option + =)
+  shrink-main:
+    mod: mod1
+    key: minus
+  expand-main:
+    mod: mod1
+    key: equal
+
+  toggle-float:
+    mod: mod2
+    key: f
+
+  toggle-tiling:
+    mod: mod2
+    key: t
+
+  relaunch-amethyst:
+    mod: mod2
+    key: r
