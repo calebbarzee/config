@@ -45,6 +45,11 @@
           "paths": [
             "~/EMCHECK/backend"
           ]
+        },
+        {
+          "paths": [
+            "~/cariboulite"
+          ]
         }
       ]
     }
