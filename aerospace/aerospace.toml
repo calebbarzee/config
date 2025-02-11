@@ -130,5 +130,5 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'finder'
+if.app-name-regex-substring = 'finder | messages | mail | spotify | slack'
 run = 'layout floating'
