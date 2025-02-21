@@ -11,7 +11,7 @@ default-root-container-orientation = 'auto'
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
-automatically-unhide-macos-hidden-apps = true
+automatically-unhide-macos-hidden-apps = false
 
 [key-mapping]
     preset = 'qwerty'
@@ -130,5 +130,21 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'finder | messages | mail | spotify | slack'
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'layout floating'

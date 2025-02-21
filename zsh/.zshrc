@@ -10,10 +10,12 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # work config
 export GOPRIVATE='github.com/Trident-Sensing/*'
-#brew services start black # start up python formatter
 
-source ~/.config/zsh/utility_functions.zsh
+# zsh case-insensitive completions
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 # utility functions get sourced first since some aliases shorten these functions
+source ~/.config/zsh/utility_functions.zsh
 source ~/.config/zsh/aliases.zsh
 
 source $HOME/.cargo/env

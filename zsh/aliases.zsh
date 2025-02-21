@@ -38,8 +38,9 @@ alias gccd='git_clone_and_cd'
 alias fcd='find_and_cd'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias f='fzf'
-alias grep='rg --hidden'
-alias ls='pwd; ls -lah --color=auto'
+alias fm='yazi' # yazi - terminal file manager
+alias f='fzf' # fuzzy find
+alias grep='rg --hidden' # ripgrep - search hidden files
+alias ls='pwd; ls -lah --color=auto' # ls - display all items and properties
 # CLI utilities
-alias tree='tree -a -I ".DS_Store|.git|node_modules|*.log"'
+alias tree='tree -a -I ".DS_Store|.git|node_modules|*.log|build|*cache"'

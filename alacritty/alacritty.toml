@@ -7,7 +7,7 @@ save_to_clipboard = true
 [window]
 dynamic_padding = true
 startup_mode = "Windowed"
-dimensions = { columns = 100, lines = 68 }
+dimensions = { columns = 40, lines = 80 }
 
 [font]
 normal = { family = "FiraCode Nerd Font Propo", style = "Regular" }
@@ -70,5 +70,7 @@ white   = "#828282"
 
 [keyboard]
 bindings = [
-    { "action" = "ToggleViMode", "key" = "v", "mods" = "Command | Control | Option | Shift" }
+    { "action" = "ToggleViMode", "key" = "v", "mods" = "Command | Control | Option | Shift" },
+    { "action" = "ReceiveChar", "key" = "t", "mods" = "Command" },
+    { "action" = "None", "key" = "t", "mods" = "Command" }
 ]
