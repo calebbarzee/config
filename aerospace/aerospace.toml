@@ -148,3 +148,7 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'layout floating'
