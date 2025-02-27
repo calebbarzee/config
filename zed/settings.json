@@ -23,9 +23,24 @@
           "paths": [
             "~/cariboulite"
           ]
+        },
+        {
+          "paths": [
+            "~/gr-test_module"
+          ]
         }
       ]
     },
+    {
+      "host": "10.1.7.160",
+      "username": "pi",
+      "projects": []
+    },
+    {
+      "host": "10.1.7.160",
+      "username": "pi",
+      "projects": []
+    }
   ],
     "soft_wrap": "editor_width",
     "relative_line_numbers": true,

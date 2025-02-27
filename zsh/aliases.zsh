@@ -21,6 +21,7 @@ alias d_build_v='BUILDKIT_PROGRESS=plain docker buildx build'
 alias g_s='git fetch --all && git status'
 alias g_st='git status' # to remind me there's an alias, but better to use g_s for fetch first
 alias g_i='git_info'
+alias g_l='git log --oneline --graph --decorate -n 20'
 alias g_fd='git_file_diff_10'
 alias g_p='git pull'
 alias g_pu='git push'
@@ -41,8 +42,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cd='z'
 alias fm='yazi' # yazi - terminal file manager
-alias f='fzf' # fuzzy find
+alias find='fzf' # fuzzy find
 alias grep='rg --hidden' # ripgrep - search hidden files
 alias ls='pwd; ls -lah --color=auto' # ls - display all items and properties
 # CLI utilities
 alias tree='tree -a -I ".DS_Store|.git|node_modules|*.log|build|*cache"'
+alias man='() { man "$@" | bat; }'
