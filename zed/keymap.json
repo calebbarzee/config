@@ -62,7 +62,6 @@
     "cmd-m": "zed::Minimize",
     "fn-f": "zed::ToggleFullScreen",
     "ctrl-cmd-f": "zed::ToggleFullScreen",
-    "ctrl-shift-z": "zeta::RateCompletions",
     "ctrl-shift-i": "edit_prediction::ToggleMenu"
 }
 },
@@ -443,7 +442,7 @@
     "ctrl-space": "editor::ShowCompletions",
     "cmd-.": "editor::ToggleCodeActions",
     "cmd-k r": "editor::RevealInFileManager", // open the current file in native file manager
-    "cmd-k p": "editor::CopyPath",
+    "cmd-k p": "workspace::CopyPath",
     "cmd-\\": "pane::SplitRight",
     "cmd-k v": "markdown::OpenPreviewToTheSide",
     "cmd-shift-v": "markdown::OpenPreview",
@@ -486,7 +485,7 @@
     // "alt-cmd-o": ["projects::OpenRecent", {"create_new_window": true }],
     "alt-cmd-o": "projects::OpenRecent",
     "ctrl-cmd-o": "projects::OpenRemote",
-    "alt-cmd-b": "branches::OpenRecent",
+    "alt-cmd-b": "git::Branch",
     "ctrl-~": "workspace::NewTerminal",
     "cmd-s": "workspace::Save",
     "cmd-k s": "workspace::SaveWithoutFormat",
@@ -751,8 +750,6 @@
 "bindings": {
     "alt-up": "git_panel::FocusChanges",
     "escape": "git_panel::FocusChanges",
-    "cmd-enter": "git::CommitChanges",
-    "cmd-alt-enter": "git::CommitAllChanges"
 }
 },
 {

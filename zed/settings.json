@@ -1,47 +1,37 @@
-{
+    {
     "ssh_connections": [
     {
-      "host": "emcheck-dev-2.local",
-      "username": "pi",
-      "projects": [
+        "host": "emcheck-dev-2.local",
+        "username": "pi",
+        "projects": [
         {
-          "paths": [
-            "/home/pi"
-          ]
+            "paths": ["/home/pi"]
         },
         {
-          "paths": [
-            "~/EMCHECK"
-          ]
+            "paths": ["~/EMCHECK"]
         },
         {
-          "paths": [
-            "~/EMCHECK/backend"
-          ]
+            "paths": ["~/EMCHECK/backend"]
         },
         {
-          "paths": [
-            "~/cariboulite"
-          ]
+            "paths": ["~/cariboulite"]
         },
         {
-          "paths": [
-            "~/gr-test_module"
-          ]
+            "paths": ["~/gr-test_module"]
         }
-      ]
+        ]
     },
     {
-      "host": "10.1.7.160",
-      "username": "pi",
-      "projects": []
+        "host": "10.1.7.160",
+        "username": "pi",
+        "projects": []
     },
     {
-      "host": "10.1.7.160",
-      "username": "pi",
-      "projects": []
+        "host": "10.1.7.160",
+        "username": "pi",
+        "projects": []
     }
-  ],
+    ],
     "soft_wrap": "editor_width",
     "relative_line_numbers": true,
     "ui_font_size": 14,
@@ -50,14 +40,14 @@
     "buffer_font_size": null,
     "buffer_line_height": "comfortable",
     "buffer_font_features": {
-        "calt": false
+    "calt": false
     },
     "assistant": {
-        "default_model": {
-            "provider": "zed.dev",
-            "model": "claude-3-5-sonnet-latest"
-        },
-        "version": "2"
+    "default_model": {
+        "provider": "zed.dev",
+        "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
     },
     "autosave": "on_focus_change",
     "format_on_save": "off",
@@ -66,76 +56,76 @@
     "ensure_final_newline_on_save": false,
     "vim_mode": true,
     "theme": {
-        "mode": "dark",
-        "light": "One Light",
-        "dark": "Gruvbox Dark"
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Gruvbox Dark"
     },
     "search": {
-        "case_sensitive": false
+    "case_sensitive": false
     },
     "file_types": {
-        "Dockerfile": ["Dockerfile*"]
+    "Dockerfile": ["Dockerfile*"]
     },
     "inlay_hints": {
-        // just write these in/autocomplete them
-        "enabled": false,
-        "show_type_hints": true,
-        "show_parameter_hints": true,
-        "show_other_hints": true
+    // just write these in/autocomplete them
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
     },
     "lsp": {
-        "gopls": {
-            "initialization_options": {
-                "usePlaceholders": true,
-                "staticcheck": true,
-                "analyses": {
-                    "unusedparams": true,
-                    "shadow": true
-                }
-            }
-        },
-        "pyright": {
-            "settings": {
-                "python.analysis": {
-                    "diagnosticMode": "workspace",
-                    "typeCheckingMode": "basic"
-                },
-                "python.pythonPath": "/opt/homebrew/bin/python3"
-            }
-        },
-        "deno": {
-            "settings": {
-                "deno": {
-                    "enable": true
-                }
-            }
+    "gopls": {
+        "initialization_options": {
+        "usePlaceholders": true,
+        "staticcheck": true,
+        "analyses": {
+            "unusedparams": true,
+            "shadow": true
+        }
         }
     },
-    "languages": {
-        "Python": {
-            "language_servers": ["pyright"]
+    "pyright": {
+        "settings": {
+        "python.analysis": {
+            "diagnosticMode": "workspace",
+            "typeCheckingMode": "basic"
         },
-        "Go": {
-            "language_servers": ["gopls"],
-            "code_actions_on_format": {
-                "source.organizeImports": true
-            }
-        },
-        "JavaScript": {
-            "language_servers": ["deno", "!eslint"],
-            "formatter": "language_server"
-        },
-        "JSX": {
-            "language_servers": ["deno", "!eslint"],
-            "formatter": "language_server"
-        },
-        "TypeScript": {
-            "language_servers": ["deno", "!eslint"],
-            "formatter": "language_server"
-        },
-        "TSX": {
-            "language_servers": ["deno", "!eslint"],
-            "formatter": "language_server"
+        "python.pythonPath": "/opt/homebrew/bin/python3"
+        }
+    },
+    "deno": {
+        "settings": {
+        "deno": {
+            "enable": true
+        }
         }
     }
-}
+    },
+    "languages": {
+    "Python": {
+        "language_servers": ["pyright"]
+    },
+    "Go": {
+        "language_servers": ["gopls"],
+        "code_actions_on_format": {
+        "source.organizeImports": true
+        }
+    },
+    "JavaScript": {
+        "language_servers": ["deno", "!eslint"],
+        "formatter": "language_server"
+    },
+    "JSX": {
+        "language_servers": ["deno", "!eslint"],
+        "formatter": "language_server"
+    },
+    "TypeScript": {
+        "language_servers": ["deno", "!eslint"],
+        "formatter": "language_server"
+    },
+    "TSX": {
+        "language_servers": ["deno", "!eslint"],
+        "formatter": "language_server"
+    }
+    }
+    }

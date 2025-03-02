@@ -14,25 +14,31 @@ alias brew_arm_ri='arch -arm64 brew reinstall'
 alias huggin='huggingface-cli'
 # docker
 alias d='docker'
-alias d_comp='docker-compose'
-alias d_build_v_nc='BUILDKIT_PROGRESS=plain docker buildx build --no-cache'
-alias d_build_v='BUILDKIT_PROGRESS=plain docker buildx build'
+alias dc='docker-compose'
+alias db='docker buildx build'
+alias db_c='docker buildx build --no-cache'
+alias db_v='BUILDKIT_PROGRESS=plain docker buildx build'
+alias db_v_c='BUILDKIT_PROGRESS=plain docker buildx build --no-cache'
 # git
-alias g_s='git fetch --all && git status'
-alias g_st='git status' # to remind me there's an alias, but better to use g_s for fetch first
-alias g_i='git_info'
-alias g_l='git log --oneline --graph --decorate -n 20'
-alias g_fd='git_file_diff_10'
-alias g_p='git pull'
-alias g_pu='git push'
-alias g_brs='git fetch --all && git branch -a'
-alias g_x='git checkout'
-alias g_br='git checkout -b'
-alias g_c='git commit -m' # commit with a provided message
-alias g_a='git add'
-alias g_u='git reset --soft' # unstage the current changes and reset to HEAD
-alias g_sy='git_sync'
-alias gh_c='git_create_private'
+alias gs='git fetch --all && git status'
+alias gst='git status' # to remind me there's an alias, but better to use git s for fetch first
+alias gi='git_info'
+alias gl='git log --oneline --graph --decorate -n 20'
+alias gfd='git_file_diff_10'
+alias gp='git pull'
+alias gpl='git pull'
+alias gps='git push'
+alias gb='git fetch --all && git branch -ra' # view all branches
+alias gbr='git checkout -b' # create a new branch and switch to it
+alias gx='git checkout'
+alias gc='git commit' # commit with a provided message
+alias gcm='git commit -m' # commit with a provided message
+alias ga='git add'
+alias gr='git restore'
+# TODO: re-evaluate if git reset --soft is actually what I want here
+alias gu='git reset --soft' # unstage the current changes and reset to HEAD
+alias gsy='git_sync' # TODO: revise function, go away from git commit -i, also maybe just move to lazy git TUI
+alias gh_c='git_create_private' # creates a private github repository
 # unix CLI customize
 alias mkcd='mkdir_and_cd'
 alias gccd='git_clone_and_cd'
@@ -46,5 +52,5 @@ alias find='fzf' # fuzzy find
 alias grep='rg --hidden' # ripgrep - search hidden files
 alias ls='pwd; ls -lah --color=auto' # ls - display all items and properties
 # CLI utilities
-alias tree='tree -a -I ".DS_Store|.git|node_modules|*.log|build|*cache"'
+alias tree='tree -a -I ".DS_Store|.git|node_modules|*.log|build|*cache|.next"'
 alias man='() { man "$@" | bat; }'
