@@ -1,37 +1,48 @@
     {
     "ssh_connections": [
     {
-        "host": "emcheck-dev-2.local",
-        "username": "pi",
-        "projects": [
+      "host": "emcheck-dev-2.local",
+      "username": "pi",
+      "projects": [
         {
-            "paths": ["/home/pi"]
+          "paths": [
+            "/home/pi"
+          ]
         },
         {
-            "paths": ["~/EMCHECK"]
+          "paths": [
+            "~/EMCHECK"
+          ]
         },
         {
-            "paths": ["~/EMCHECK/backend"]
+          "paths": [
+            "~/EMCHECK/backend"
+          ]
         },
         {
-            "paths": ["~/cariboulite"]
+          "paths": [
+            "~/cariboulite"
+          ]
         },
         {
-            "paths": ["~/gr-test_module"]
+          "paths": [
+            "~/gr-test_module"
+          ]
         }
-        ]
+      ]
     },
     {
-        "host": "10.1.7.160",
-        "username": "pi",
-        "projects": []
-    },
-    {
-        "host": "10.1.7.160",
-        "username": "pi",
-        "projects": []
+      "host": "emcheck-pp4.local",
+      "username": "pi",
+      "projects": [
+        {
+          "paths": [
+            "~/EMCHECK/backend"
+          ]
+        }
+      ]
     }
-    ],
+  ],
     "soft_wrap": "editor_width",
     "relative_line_numbers": true,
     "ui_font_size": 14,
@@ -45,10 +56,11 @@
     "assistant": {
     "default_model": {
         "provider": "zed.dev",
-        "model": "claude-3-5-sonnet-latest"
+        "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
     },
+    "remove_trailing_whitespace_on_save": false,
     "autosave": "on_focus_change",
     "format_on_save": "off",
     "tab_size": 4,

@@ -15,10 +15,10 @@ alias huggin='huggingface-cli'
 # docker
 alias d='docker'
 alias dc='docker-compose'
-alias db='docker buildx build'
-alias db_c='docker buildx build --no-cache'
-alias db_v='BUILDKIT_PROGRESS=plain docker buildx build'
-alias db_v_c='BUILDKIT_PROGRESS=plain docker buildx build --no-cache'
+alias db='docker build'
+alias db_c='docker build --no-cache'
+alias db_v='BUILDKIT_PROGRESS=plain docker build'
+alias db_v_c='BUILDKIT_PROGRESS=plain docker build --no-cache'
 # git
 alias gs='git fetch --all && git status'
 alias gst='git status' # to remind me there's an alias, but better to use git s for fetch first
