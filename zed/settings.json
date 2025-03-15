@@ -21,6 +21,11 @@
         },
         {
           "paths": [
+            "~/EMCHECK/frontend"
+          ]
+        },
+        {
+          "paths": [
             "~/cariboulite"
           ]
         },
@@ -35,6 +40,11 @@
       "host": "emcheck-pp4.local",
       "username": "pi",
       "projects": [
+        {
+          "paths": [
+            "~/EMCHECK"
+          ]
+        },
         {
           "paths": [
             "~/EMCHECK/backend"
@@ -104,13 +114,6 @@
         },
         "python.pythonPath": "/opt/homebrew/bin/python3"
         }
-    },
-    "deno": {
-        "settings": {
-        "deno": {
-            "enable": true
-        }
-        }
     }
     },
     "languages": {
@@ -122,22 +125,6 @@
         "code_actions_on_format": {
         "source.organizeImports": true
         }
-    },
-    "JavaScript": {
-        "language_servers": ["deno", "!eslint"],
-        "formatter": "language_server"
-    },
-    "JSX": {
-        "language_servers": ["deno", "!eslint"],
-        "formatter": "language_server"
-    },
-    "TypeScript": {
-        "language_servers": ["deno", "!eslint"],
-        "formatter": "language_server"
-    },
-    "TSX": {
-        "language_servers": ["deno", "!eslint"],
-        "formatter": "language_server"
     }
     }
     }

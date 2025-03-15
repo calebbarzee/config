@@ -25,10 +25,6 @@ pathify() {
     fi
 }
 
-open_zed() {
-    zed "$(pathify "${1:-$(pwd)}")"
-}
-
 open_alacritty_and_exit() {
     local dir="${1:-$(pwd)}"
     if [ -d "$dir" ]; then

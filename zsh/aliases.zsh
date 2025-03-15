@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-alias zed='open_zed'
 # terminal open (override macOS native terminal open)
 alias alacritty='open_alacritty_and_exit'
 # python (default to python 3)
@@ -20,6 +19,7 @@ alias db_c='docker build --no-cache'
 alias db_v='BUILDKIT_PROGRESS=plain docker build'
 alias db_v_c='BUILDKIT_PROGRESS=plain docker build --no-cache'
 # git
+alias g='git'
 alias gs='git fetch --all && git status'
 alias gst='git status' # to remind me there's an alias, but better to use git s for fetch first
 alias gi='git_info'

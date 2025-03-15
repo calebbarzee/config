@@ -11,8 +11,12 @@ export XDG_CONFIG_HOME=$HOME/.config
 # work config
 export GOPRIVATE='github.com/Trident-Sensing/*'
 
+# TODO: fix this
 # zsh case-insensitive completions
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# git completions
+autoload -Uz compinit && compinit
 
 # utility functions get sourced first since some aliases shorten these functions
 source ~/.config/zsh/utility_functions.zsh
