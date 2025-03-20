@@ -3,6 +3,8 @@
 .zsh_history
 .zsh_sessions
 .zcompdump
+# zsh-you-should-use plugin i pull from github
+zsh-you-should-use
 zed/conversations
 zed/embeddings
 zed/prompts

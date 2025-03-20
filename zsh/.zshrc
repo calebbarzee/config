@@ -1,5 +1,8 @@
 #!/bin/zsh
-    
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8    
+
 if [[ "$(uname)" == "Darwin" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     export PATH="/opt/homebrew/bin/alacritty:$PATH"
@@ -9,6 +12,11 @@ if [[ "$(uname)" == "Darwin" ]]; then
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
+fi
+if [[ "$(uname)" == "Linux" ]]; then
+    source ~/.zsh/zsh-you-should-use/you-should-use.plugin.zsh
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # config dir redirect

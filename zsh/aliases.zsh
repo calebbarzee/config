@@ -29,6 +29,7 @@ alias gs='git fetch --all && git status'
 alias gst='git status' # to remind me there's an alias, but better to use git s for fetch first
 alias gi='git_info'
 alias gl='git log --oneline --graph --decorate -n 20'
+alias gd='git diff'
 alias gfd='git_file_diff_10'
 alias gp='git pull'
 alias gpl='git pull'
@@ -58,4 +59,8 @@ alias grep='rg --hidden' # ripgrep - search hidden files
 alias ls='pwd; ls -lah --color=auto' # ls - display all items and properties
 # CLI utilities
 alias tree='tree -a -I ".DS_Store|.git|node_modules|*.log|build|*cache|.next"'
+if lsb_release -a 2>/dev/null | grep -q "Ubuntu"; then
+    alias bat='batcat'
+fi
 alias man='() { man "$@" | bat; }'
+alias cat='bat'

@@ -12,6 +12,9 @@ rustup update
 
 # install core CLI tools and neovim dependencies
 sudo apt install \
+zsh \
+zsh-autosuggestions \
+zsh-syntax-highlighting \
 ripgrep \
 fd-find \
 bat \
@@ -33,6 +36,15 @@ poppler-utils \
 fzf \
 zoxide
 
+echo "installing nerd font..."
+mkdir -p ~/.local/share/fonts/NerdFonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
+unzip FiraCode.zip -d ~/.local/share/fonts/NerdFonts
+rm FiraCode.zip
+fc-cache -fv
+
+echo "installing zsh-you-should-use..."
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.config/zsh/zsh-you-should-use 
 echo "copying config for zsh..."
 cp -a ./zsh/. ~/.config/zsh/
 
