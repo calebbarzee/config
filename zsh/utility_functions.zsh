@@ -4,10 +4,6 @@ mkdir_and_cd() {
   mkdir -p "$1" && cd "$1"
 }
 
-git_clone_and_cd() {
-  git clone "$1" && cd "$(basename "$1" .git)"
-}
-
 find_and_cd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) &&
@@ -25,16 +21,6 @@ pathify() {
     fi
 }
 
-open_alacritty_and_exit() {
-    local dir="${1:-$(pwd)}"
-    if [ -d "$dir" ]; then
-        alacritty --working-directory "$dir" & disown
-        exit
-    else
-        echo 'Error: Directory "$dir" does not exist.'
-        return 1
-    fi
-}
 
 read_Yn() {
     local prompt="$1"
@@ -47,6 +33,24 @@ read_Yn() {
             *) echo 'Please enter y/Y/Enter for yes, or n/N for no' ;;
         esac
     done
+}
+
+# gets all windows in currently focused workspace and moves each window to specified workspace
+move_windows_to_ws() {
+    DEST_WS="$1"
+    CURR_WS=$(aerospace list-workspaces --focused)
+    for WIN_ID in $(aerospace list-windows --workspace $CURR_WS --format %{window-id}); do
+        aerospace move-node-to-workspace --window-id $WIN_ID $DEST_WS;
+    done
+    aerospace workspace $DEST_WS;
+}
+
+git_clone_and_cd() {
+  git clone "$1" && cd "$(basename "$1" .git)"
+}
+
+github_create_private() {
+    gh repo create '$1' --private --source=. --remote=origin --push
 }
 
 git_sync() {
@@ -136,6 +140,14 @@ git_file_diff_10() {
     PAGER='' git diff $old_commit..HEAD "$1"
 }
 
-github_create_private() {
-    gh repo create '$1' --private --source=. --remote=origin --push
+# TODO: re-evaluate terminal behavior and such
+open_alacritty_and_exit() {
+    local dir="${1:-$(pwd)}"
+    if [ -d "$dir" ]; then
+        alacritty --working-directory "$dir" & disown
+        exit
+    else
+        echo 'Error: Directory "$dir" does not exist.'
+        return 1
+    fi
 }

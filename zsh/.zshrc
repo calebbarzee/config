@@ -1,9 +1,15 @@
 #!/bin/zsh
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="/opt/homebrew/bin/alacritty:$PATH"
-export PATH="/opt/homebrew/opt/go/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+    
+if [[ "$(uname)" == "Darwin" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    export PATH="/opt/homebrew/bin/alacritty:$PATH"
+    export PATH="/opt/homebrew/opt/go/bin:$PATH"
+    export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+        
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
+fi
 
 # config dir redirect
 export XDG_CONFIG_HOME=$HOME/.config
@@ -32,6 +38,3 @@ source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
