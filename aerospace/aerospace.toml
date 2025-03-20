@@ -16,6 +16,9 @@ automatically-unhide-macos-hidden-apps = false
 [key-mapping]
     preset = 'qwerty'
 
+[exec]
+    inherit-env-vars = true
+    
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
@@ -116,6 +119,25 @@ automatically-unhide-macos-hidden-apps = false
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']
+    
+    # TODO: troubleshoot and fix, cli works but not aerospace hotkey
+    # move all windows from current workspace to workspace X
+    alt-1 = 'exec-and-forget /bin/zsh -c "echo \"Attempting to run at $(date)\" > /Users/calebbarzee/aerospace_debug.log && CURR_WS=$(aerospace list-workspaces --focused) && echo \"Found workspace: $CURR_WS\" >> /Users/calebbarzee/aerospace_debug.log && for WIN_ID in $(aerospace list-windows --workspace $CURR_WS --format %{window-id}); do aerospace move-node-to-workspace --window-id $WIN_ID 1; done && aerospace workspace 1"'
+    # alt-1 = 'exec-and-forget /bin/zsh -c "CURR_WS=$(aerospace list-workspaces --focused) for WIN_ID in $(aerospace list-windows --workspace $CURR_WS --format %{window-id}); do aerospace move-node-to-workspace --window-id $WIN_ID 1; done aerospace workspace 1;"'
+    # alt-1 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 1"'
+    alt-2 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 2"'
+    alt-3 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 3"'
+    alt-4 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 4"'
+    alt-5 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 5"'
+    alt-6 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 6"'
+    alt-7 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 7"'
+    alt-8 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 8"'
+    alt-9 = 'exec-and-forget /bin/zsh -c "move_windows_to_ws 9"'    
+    
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
@@ -124,10 +146,6 @@ automatically-unhide-macos-hidden-apps = false
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
