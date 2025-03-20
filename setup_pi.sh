@@ -15,10 +15,11 @@ sudo apt install \
 zsh \
 zsh-autosuggestions \
 zsh-syntax-highlighting \
+git \
+gh \
 ripgrep \
 fd-find \
 bat \
-git \
 libtool \
 libtool-bin \
 autoconf \
@@ -43,6 +44,11 @@ zoxide
 # rm FiraCode.zip
 # fc-cache -fv
 
+echo "copying config for git..."
+cp -a ./git/. ~/.config/git/
+
+gh auth login
+
 echo "installing zsh-you-should-use..."
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.config/zsh/zsh-you-should-use 
 echo "copying config for zsh..."
@@ -52,10 +58,7 @@ echo "installing difftastic..."
 curl -s https://api.github.com/repos/Wilfred/difftastic/releases/latest | \
 grep "browser_download_url.*aarch64.*linux" | cut -d '"' -f 4 | wget -i -
 tar -xzf difft-aarch64-unknown-linux-gnu.tar.gz && rm difft-aarch64-unknown-linux-gnu.tar.gz
-sudo cp ./difft /usr/local/bin/difft && rm ./difft
-
-echo "copying config for git..."
-cp -a ./git/. ~/.config/git/
+sudo cp difft /usr/local/bin/difft && rm ./difft
 
 echo "installing zoxide..."
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
@@ -74,7 +77,7 @@ echo "installing yazi..."
 # rm -r yazi_repo
 curl -s https://api.github.com/repos/sxyazi/yazi/releases/latest | \
 grep "browser_download_url.*aarch64.*linux.*gnu" | cut -d '"' -f 4 | wget -i -
-unzip yazi-aarch64-unknown-linux-gnu.zip
+unzip yazi-aarch64-unknown-linux-gnu
 cd yazi-aarch64-unknown-linux-gnu
 sudo cp ya yazi /usr/local/bin/
 cd ..
