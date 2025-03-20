@@ -35,15 +35,18 @@ read_Yn() {
     done
 }
 
-# gets all windows in currently focused workspace and moves each window to specified workspace
-move_windows_to_ws() {
-    DEST_WS="$1"
-    CURR_WS=$(aerospace list-workspaces --focused)
-    for WIN_ID in $(aerospace list-windows --workspace $CURR_WS --format %{window-id}); do
-        aerospace move-node-to-workspace --window-id $WIN_ID $DEST_WS;
-    done
-    aerospace workspace $DEST_WS;
-}
+# aerospace only used on macOS
+if [[ "$(uname)" == "Darwin" ]]; then
+    # gets all windows in currently focused workspace and moves each window to specified workspace
+    move_windows_to_ws() {
+        DEST_WS="$1"
+        CURR_WS=$(aerospace list-workspaces --focused)
+        for WIN_ID in $(aerospace list-windows --workspace $CURR_WS --format %{window-id}); do
+            aerospace move-node-to-workspace --window-id $WIN_ID $DEST_WS;
+        done
+        aerospace workspace $DEST_WS;
+    }
+fi
 
 git_clone_and_cd() {
   git clone "$1" && cd "$(basename "$1" .git)"
@@ -140,14 +143,17 @@ git_file_diff_10() {
     PAGER='' git diff $old_commit..HEAD "$1"
 }
 
-# TODO: re-evaluate terminal behavior and such
-open_alacritty_and_exit() {
-    local dir="${1:-$(pwd)}"
-    if [ -d "$dir" ]; then
-        alacritty --working-directory "$dir" & disown
-        exit
-    else
-        echo 'Error: Directory "$dir" does not exist.'
-        return 1
-    fi
-}
+# TODO: remove this it's dumb
+# terminal overide to alacritty only used on macOS 
+if [[ "$(uname)" == "Darwin" ]]; then
+    open_alacritty_and_exit() {
+        local dir="${1:-$(pwd)}"
+        if [ -d "$dir" ]; then
+            alacritty --working-directory "$dir" & disown
+            exit
+        else
+            echo 'Error: Directory "$dir" does not exist.'
+            return 1
+        fi
+    }
+fi

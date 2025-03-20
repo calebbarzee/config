@@ -1,14 +1,19 @@
 #!/bin/zsh
 
+# TODO: remove this it's dumb
 # terminal open (override macOS native terminal open)
-alias alacritty='open_alacritty_and_exit'
+if [[ "$(uname)" == "Darwin" ]]; then
+    alias alacritty='open_alacritty_and_exit'
+fi
+# homebrew
+if [[ "$(uname)" == "Darwin" ]]; then
+    alias brew_arm_i='arch -arm64 brew install'
+    alias brew_arm_ri='arch -arm64 brew reinstall'
+fi
 # python (default to python 3)
 alias py='python3'
 alias pip='pip3'
 alias py_venv='python3 -m venv .python && source .python/bin/activate'
-# homebrew
-alias brew_arm_i='arch -arm64 brew install'
-alias brew_arm_ri='arch -arm64 brew reinstall'
 # ai tools
 alias huggin='huggingface-cli'
 # docker
