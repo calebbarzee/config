@@ -14,8 +14,6 @@
 	insteadOf = git://
 [submodule]
 	recurse = true
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
 [credential]
 	helper = cache --timeout=3600
 [commit]
@@ -25,9 +23,3 @@
 [difftool "difftastic"]
     # See `man git-difftool` for a description of MERGED, LOCAL and REMOTE.
     cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true

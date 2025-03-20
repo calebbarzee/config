@@ -2,6 +2,7 @@
 **credentials
 .zsh_history
 .zsh_sessions
+.zcompdump
 zed/conversations
 zed/embeddings
 zed/prompts
