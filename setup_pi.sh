@@ -31,8 +31,7 @@ ffmpeg \
 jq \
 poppler-utils \
 fzf \
-zoxide \
-imagemagick \
+zoxide
 
 echo "copying config for zsh..."
 cp -a ./zsh/. ~/.config/zsh/
@@ -40,7 +39,7 @@ cp -a ./zsh/. ~/.config/zsh/
 echo "installing difftastic..."
 curl -s https://api.github.com/repos/Wilfred/difftastic/releases/latest | \
 grep "browser_download_url.*aarch64.*linux" | cut -d '"' -f 4 | wget -i -
-tar -xzf difft-aarch64-unknown-linux-gnu.tar.gz
+tar -xzf difft-aarch64-unknown-linux-gnu.tar.gz && rm difft-aarch64-unknown-linux-gnu.tar.gz
 sudo cp ./difft /usr/local/bin/difft && rm ./difft
 
 echo "copying config for git..."
@@ -55,9 +54,19 @@ echo "copying config for atuin..."
 cp -a ./atuin/. ~/.config/atuin/
     
 echo "installing yazi..."
-git clone https://github.com/sxyazi/yazi.git
-cd yazi
-cargo build --release --locked
+# git clone https://github.com/sxyazi/yazi.git yazi_repo
+# cd yazi_repo
+# cargo build --release --locked
+# copy target/release binary
+# cd ..
+# rm -r yazi_repo
+curl -s https://api.github.com/repos/sxyazi/yazi/releases/latest | \
+grep "browser_download_url.*aarch64.*linux.*gnu" | cut -d '"' -f 4 | wget -i -
+unzip yazi-aarch64-unknown-linux-gnu.zip
+cd yazi-aarch64-unknown-linux-gnu
+sudo cp ya yazi /usr/local/bin/
+cd ..
+rm -rf yazi-aarch64-unknown-linux-gnu
 echo "copying config for yazi..."
 cp -a ./yazi/. ~/.config/yazi/
 
