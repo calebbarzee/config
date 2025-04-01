@@ -24,11 +24,13 @@ libtool \
 libtool-bin \
 autoconf \
 automake \
+make \
 cmake \
 g++ \
 pkg-config \
 unzip \
-netcat \
+curl \
+netcat-traditional \
 network-manager \
 ffmpeg \
 7zip \
@@ -101,5 +103,5 @@ echo "copying config for nvim..."
 cp -a ./nvim/. ~/.config/nvim/
 nvim
 
-cd ..
-rm -rf config/
+# cd ..
+# rm -rf config/
